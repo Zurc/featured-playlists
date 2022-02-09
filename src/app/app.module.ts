@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { CoreModule } from './core/core.module';
 
@@ -36,7 +37,12 @@ import { reducerSetup } from './state/playlist/playlist.reducer';
     StoreModule.forRoot({ state: reducerSetup }),
     StoreDevtoolsModule.instrument(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
