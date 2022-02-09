@@ -1,0 +1,29 @@
+<ng-container
+  *ngIf="(playlists$ | async).state?.loading"
+  style="margin-top: 80px"
+>
+  <app-spinner></app-spinner>
+</ng-container>
+
+<ng-container #playlist>
+  <section
+    class="content"
+    *ngIf="
+      (playlists$ | async).state?.playlist?.featuredPlaylists
+        .content as playlists
+    "
+  >
+    <a
+      *ngFor="let playlist of playlists"
+      class="playlist"
+      [href]="playlist.url"
+      target="_blank"
+    >
+      <app-playlist-item [playlist]="playlist"></app-playlist-item>
+    </a>
+  </section>
+</ng-container>
+
+<!-- <div *ngIf="playlistsHasError$ | async as error">
+  {{ error | json }}
+</div> -->

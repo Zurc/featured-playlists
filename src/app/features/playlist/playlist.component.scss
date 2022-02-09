@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.playlist {
+  margin: 16px;
+  display: flex;
+  text-decoration: none;
+
+  .cards {
+    width: 230px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
