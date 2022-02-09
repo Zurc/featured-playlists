@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -21,10 +21,10 @@
     "lib": ["es2020", "dom"],
     "paths": {
       "@env": ["environments/environment"],
-      "@shared/*": ["app/shared/*"],
-      "@features/*": ["app/features/*"],
-      "@core/*": ["app/core/*"],
-      "@state/*": ["app/state/*"]
+      "@shared/*": ["./src/app/shared/*"],
+      "@features/*": ["./src/app/features/*"],
+      "@core/*": ["./src/app/core/*"],
+      "@state/*": ["./src/app/state/*"]
     }
   },
   "angularCompilerOptions": {
