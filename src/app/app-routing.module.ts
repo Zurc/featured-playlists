@@ -14,6 +14,10 @@ const routes: Routes = [
         (m) => m.PlaylistModule
       ),
   },
+  {
+    path: '**',
+    redirectTo: '/playlist',
+  },
 ];
 
 @NgModule({
