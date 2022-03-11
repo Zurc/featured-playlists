@@ -1,6 +1,6 @@
 # Turner & Townsend Frontend Technical Assessment
 
-Angular v13.2., node v17.4, TS v5.3, RxJS v7.5.
+Angular v13.2., node v16, TS v5.3, RxJS v7.5.
 
 ## Thoughts
 
